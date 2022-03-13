@@ -1,0 +1,3 @@
+The artist 'Ariana Grande' has a popularity score of 93
+The artist 'JAY-Z' has a popularity score of 88
+The artist 'Drake' has a popularity score of 98
