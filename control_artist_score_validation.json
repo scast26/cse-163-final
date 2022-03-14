@@ -2,11 +2,47 @@
   "artists": [
     {
       "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3Nrfpe0tUJi4K4DXYWgMUX"
+      },
+      "followers": {
+        "href": null,
+        "total": 46793860
+      },
+      "genres": [
+        "k-pop",
+        "k-pop boy group"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3Nrfpe0tUJi4K4DXYWgMUX",
+      "id": "3Nrfpe0tUJi4K4DXYWgMUX",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb82a5d58059f81867b871d8b6",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517482a5d58059f81867b871d8b6",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17882a5d58059f81867b871d8b6",
+          "width": 160
+        }
+      ],
+      "name": "BTS",
+      "popularity": 96,
+      "type": "artist",
+      "uri": "spotify:artist:3Nrfpe0tUJi4K4DXYWgMUX"
+    },
+    {
+      "external_urls": {
         "spotify": "https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR"
       },
       "followers": {
         "href": null,
-        "total": 77023390
+        "total": 77064228
       },
       "genres": [
         "dance pop",
@@ -38,48 +74,11 @@
     },
     {
       "external_urls": {
-        "spotify": "https://open.spotify.com/artist/3nFkdlSjzX9mRTtwJOzDYB"
-      },
-      "followers": {
-        "href": null,
-        "total": 7096649
-      },
-      "genres": [
-        "east coast hip hop",
-        "hip hop",
-        "rap"
-      ],
-      "href": "https://api.spotify.com/v1/artists/3nFkdlSjzX9mRTtwJOzDYB",
-      "id": "3nFkdlSjzX9mRTtwJOzDYB",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5ebc75afcd5a9027f60eaebb5e4",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab67616100005174c75afcd5a9027f60eaebb5e4",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f178c75afcd5a9027f60eaebb5e4",
-          "width": 160
-        }
-      ],
-      "name": "JAY-Z",
-      "popularity": 88,
-      "type": "artist",
-      "uri": "spotify:artist:3nFkdlSjzX9mRTtwJOzDYB"
-    },
-    {
-      "external_urls": {
         "spotify": "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4"
       },
       "followers": {
         "href": null,
-        "total": 61755266
+        "total": 61788807
       },
       "genres": [
         "canadian hip hop",
@@ -111,6 +110,43 @@
       "popularity": 98,
       "type": "artist",
       "uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6jJ0s89eD6GaHleKKya26X"
+      },
+      "followers": {
+        "href": null,
+        "total": 20853367
+      },
+      "genres": [
+        "dance pop",
+        "pop",
+        "post-teen pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6jJ0s89eD6GaHleKKya26X",
+      "id": "6jJ0s89eD6GaHleKKya26X",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebdc9dcb7e4a97b4552e1224d6",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174dc9dcb7e4a97b4552e1224d6",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178dc9dcb7e4a97b4552e1224d6",
+          "width": 160
+        }
+      ],
+      "name": "Katy Perry",
+      "popularity": 88,
+      "type": "artist",
+      "uri": "spotify:artist:6jJ0s89eD6GaHleKKya26X"
     }
   ]
 }

@@ -35,8 +35,10 @@ def get_tracks(token, tracks):
 
 def main():
     token = get_access_token(CLIENT_ID, CLIENT_SECRET)
-    artists = '66CXWjxzNUsdJxJ2JdwvnR,3nFkdlSjzX9mRTtwJOzDYB,3TVXtAsR1Inumwj472S9r4'
-    tracks = '1CAksvEO6oRHd9bBKWAfuY,1olNHIIVl4EVwIEPGYIR7G,10VBBaul4zVD0reteuIHM2'
+    artists = '3Nrfpe0tUJi4K4DXYWgMUX,66CXWjxzNUsdJxJ2JdwvnR,' +\
+              '3TVXtAsR1Inumwj472S9r4,6jJ0s89eD6GaHleKKya26X'
+    tracks = '03iCbZaM4OkRR4We6wIzvx,7l94dyN2hX9c6wWcZQuOGJ,' +\
+             '6V2D8Lls36APk0THDjBDfE,4r6eNCsrZnQWJzzvFh4nlg'
 
     get_artists(token, artists)
     get_tracks(token, tracks)

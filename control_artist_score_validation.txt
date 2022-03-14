@@ -1,3 +1,4 @@
+The artist 'BTS' has a popularity score of 96
 The artist 'Ariana Grande' has a popularity score of 93
-The artist 'JAY-Z' has a popularity score of 88
 The artist 'Drake' has a popularity score of 98
+The artist 'Katy Perry' has a popularity score of 88
