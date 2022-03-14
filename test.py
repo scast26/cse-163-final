@@ -1,8 +1,23 @@
+"""
+This file verifies our results from main.py. It imports requests,
+json, the get_access_token function, and the Client ID and Client
+Secret from main.py.
+"""
+
 from main import (requests, json,
                   get_access_token, CLIENT_ID, CLIENT_SECRET)
 
 
 def get_artists(token, artists):
+    """
+    This function takes an OAuth token and a comma-separated list
+    of artists as parameters. It uses this information to make a
+    GET request to Spotify's 'Get Several Artists' endpoint. A
+    successful API call will create two files: one is a .json file
+    which contains the full JSON information about each artist. The
+    other is a .txt file which only contains the artist's name, and
+    their popularity score.
+    """
     endpoint = f'https://api.spotify.com/v1/artists?ids={artists}'
     header = {"Content-Type": "application/json",
               "Authorization": "Bearer " + token}
@@ -18,6 +33,15 @@ def get_artists(token, artists):
 
 
 def get_tracks(token, tracks):
+    """
+    This function takes an OAuth token and a comma-separated list
+    of tracks as parameters. It uses this information to make a
+    GET request to Spotify's 'Get Several Tracks' endpoint. A
+    successful API call will create two files: one is a .json file
+    which contains the full JSON information about each track. The
+    other is a .txt file which only contains the track's name, the
+    artist's name, and the song's popularity score.
+    """
     endpoint = f'https://api.spotify.com/v1/tracks?ids={tracks}'
     header = {"Content-Type": "application/json",
               "Authorization": "Bearer " + token}
