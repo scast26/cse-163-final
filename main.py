@@ -3,6 +3,7 @@ import base64
 import json
 import pandas as pd
 import numpy as np
+import plotly.express as px
 
 
 DATA = 'https://raw.githubusercontent.com/scast26/cse-163'\
@@ -20,6 +21,15 @@ def filter_data(data):
             'mode', 'speechiness', 'acousticness', 'instrumentalness',
              'liveness', 'valence', 'tempo']]
     return df
+
+
+def show_box_plots(data):
+    df = data
+    df = df.melt(id_vars=["popularity", "name"], var_name="feature")
+    filtered = df[(df['feature'] != 'tempo') & (df['feature'] != 'key')
+                  & (df['feature'] != 'loudness') & (df['feature'] != 'mode')]
+    box_plot = px.box(filtered, x='feature', y='value', color='feature')
+    return box_plot
 
 
 def get_access_token(client_id, client_secret):
@@ -71,6 +81,9 @@ def get_recommendations(token, genre, feature, feature_min, feature_max):
 
 def main():
     df = filter_data(DATA)
+
+    box_plot = show_box_plots(df)
+    box_plot.show()
 
     min_valence, max_valence = compute_quartile(df, 'valence')
     min_dance, max_dance = compute_quartile(df, 'danceability')

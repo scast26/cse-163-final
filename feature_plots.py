@@ -8,6 +8,7 @@ data = pd.read_csv('https://raw.githubusercontent.com/scast26/cse-163-final/main
 data['popularity'] = pd.to_numeric(data.popularity, errors='coerce')
 data = data[data['popularity'] >= 80].sort_values('popularity')
 
+
 def facetting_scatter_plot(data, n_cols=3, y='Features'):
     numeric_cols = data.select_dtypes('number').columns
     n_rows = -(-len(numeric_cols) // n_cols)  # math.ceil in a fast way, without import
