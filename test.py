@@ -4,8 +4,8 @@ json, the get_access_token function, and the Client ID and Client
 Secret from main.py.
 """
 
-from main import (requests, json,
-                  get_access_token, CLIENT_ID, CLIENT_SECRET)
+from question_2 import (requests, json, get_access_token,
+                        CLIENT_ID, CLIENT_SECRET)
 
 
 def get_artists(token, artists):
