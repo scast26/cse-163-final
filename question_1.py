@@ -47,12 +47,29 @@ def facetting_scatter_plot(data, n_cols=3, y='Features'):
     return fig
 
 
+def show_box_plots(data):
+    """
+    This function takes a DataFrame containing songs and their audio
+    features as a parameter. It returns a plot that shows the box and whisker
+    plots of all of the features whose values range from zero to one.
+    """
+    df = data
+    df = df.melt(id_vars=["popularity", "name"], var_name="feature")
+    filtered = df[(df['feature'] != 'tempo') & (df['feature'] != 'key')
+                  & (df['feature'] != 'loudness') & (df['feature'] != 'mode')]
+    box_plot = px.box(filtered, x='feature', y='value', color='feature')
+    return box_plot
+
+
 def main():
     df = filter_data(DATA)
-    fig = facetting_scatter_plot(df.select_dtypes(np.float64))
 
+    fig = facetting_scatter_plot(df.select_dtypes(np.float64))
     fig.update_layout(width=1000, height=800, title='Comparison of Song Features', title_x=0.5)
     fig.show()
+
+    box_plot = show_box_plots(df)
+    box_plot.show()
 
 
 if __name__ == '__main__':
