@@ -8,8 +8,9 @@ import pandas as pd
 
 
 def load_data():
-    songs = pd.read_csv('19332_Spotify_Songs.csv', encoding='unicode_escape',
+    songs = pd.read_csv('song_dataset.csv', encoding='unicode_escape',
                         low_memory=False)
+    songs = songs.dropna()
     songs['popularity'] = pd.to_numeric(songs.popularity, errors='coerce')
     labels = songs['popularity']
     features = songs[['key', 'valence', 'tempo', 'liveness',
