@@ -90,3 +90,6 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_squared_error
 import pandas as pd
 ```
+Once this imports are in place, you can run the file. It will train and fit all three models; then it will test them and print out the mean squared error for each of them. The results will be different every time as the training data is randomzied and models will consequeny act differently. It will print the name of the model and then the MSE. 
+
+Please note that while we ran the keras model with 300 epochs you can run it with as many as you wish if 300 takes too long. This will be on line 56 with "model.fit(inputs_train, labels_train, epochs=300, batch_size=10)". You can change epochs=x.
