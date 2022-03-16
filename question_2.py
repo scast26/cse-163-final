@@ -1,45 +1,14 @@
 import requests
 import base64
 import json
-import pandas as pd
 import numpy as np
-import plotly.express as px
+from question_1 import filter_data, show_box_plots
 
 
-DATA = 'https://raw.githubusercontent.com/scast26/cse-163'\
-       + '-final/main/19332_Spotify_Songs.csv'
+DATA = 'song_dataset.csv'
 CLIENT_ID = 'e762a2d085544fe59a4708a96560a675'
 CLIENT_SECRET = 'f1cea31fddc74f63ad4783648a871752'
 AUTH_URL = 'https://accounts.spotify.com/api/token'
-
-
-def filter_data(data):
-    """
-    This function takes a DataFrame containing songs and their audio
-    features, and returns a DataFrame which filters the original
-    DataFrame down into songs with a popularity column of 80 or higher.
-    """
-    data = pd.read_csv(data, encoding='unicode_escape', low_memory=False)
-    data['popularity'] = pd.to_numeric(data.popularity, errors='coerce')
-    df = data[data['popularity'] >= 80]
-    df = df[['popularity', 'name', 'danceability', 'energy', 'key', 'loudness',
-            'mode', 'speechiness', 'acousticness', 'instrumentalness',
-             'liveness', 'valence', 'tempo']]
-    return df
-
-
-def show_box_plots(data):
-    """
-    This function takes a DataFrame containing songs and their audio
-    features as a parameter. It returns a plot that shows the box and whisker
-    plots of all of the features whose values range from zero to one.
-    """
-    df = data
-    df = df.melt(id_vars=["popularity", "name"], var_name="feature")
-    filtered = df[(df['feature'] != 'tempo') & (df['feature'] != 'key')
-                  & (df['feature'] != 'loudness') & (df['feature'] != 'mode')]
-    box_plot = px.box(filtered, x='feature', y='value', color='feature')
-    return box_plot
 
 
 def get_access_token(client_id, client_secret):

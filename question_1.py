@@ -6,8 +6,7 @@ import pandas as pd
 import numpy as np
 
 
-DATA = 'https://raw.githubusercontent.com/scast26/cse-163'\
-       + '-final/main/19332_Spotify_Songs.csv'
+DATA = 'song_dataset.csv'
 
 
 def filter_data(data):
@@ -36,7 +35,8 @@ def facetting_scatter_plot(data, n_cols=3, y='Features'):
     for col in numeric_cols:
         # trace extracted from the fig
         trace = px.scatter(
-            data, x=col, y=data['popularity'], trendline='ols', trendline_color_override='#DC143C')["data"]
+            data, x=col, y=data['popularity'], trendline='ols',
+            trendline_color_override='#DC143C')["data"]
         # auto selecting a position of the grid
         if col_pos == n_cols:
             row_pos += 1
@@ -57,7 +57,8 @@ def show_box_plots(data):
     df = df.melt(id_vars=["popularity", "name"], var_name="feature")
     filtered = df[(df['feature'] != 'tempo') & (df['feature'] != 'key')
                   & (df['feature'] != 'loudness') & (df['feature'] != 'mode')]
-    box_plot = px.box(filtered, x='feature', y='value', color='feature')
+    box_plot = px.box(filtered, x='feature', y='value', color='feature',
+                      title='Examining the Spread of Each Audio Feature')
     return box_plot
 
 
@@ -65,7 +66,8 @@ def main():
     df = filter_data(DATA)
 
     fig = facetting_scatter_plot(df.select_dtypes(np.float64))
-    fig.update_layout(width=1000, height=800, title='Comparison of Song Features', title_x=0.5)
+    fig.update_layout(width=1000, height=800,
+                      title='Comparison of Song Features', title_x=0.5)
     fig.show()
 
     box_plot = show_box_plots(df)
