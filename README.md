@@ -12,6 +12,14 @@ Then open Git or GitBash (depending on your operating system) to install the nec
 
 ```pip install```
 
+For the plot file labeled "question_1.py" the following imports are included:
+```ruby
+import plotly.express as px
+import plotly.subplots as sp
+import pandas as pd
+import numpy as np
+```
+
 
 ## Research Question 2: Will Spotify recommend a list of popular songs if we pass in audio feature parameters that are representative of already popular songs?
 
