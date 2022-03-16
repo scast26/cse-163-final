@@ -42,11 +42,12 @@ The title of each plot function corresponds to an image of that same name that c
 
 
 ## Research Question 2: Will Spotify recommend a list of popular songs if we pass in audio feature parameters that are representative of already popular songs?
+The ability to reproduce the results of this research question can be done by running `question_2.py`.
 To run the second research question, you will need to import requests, base64, json, and numpy. Python comes with the base64 module, and the JSON interpreter, so there is no need to install them.
 
 Numpy should already have been downloaded from the previous research question. To install requests, run the following line in your terminal:
 
-```python -m pip install requests```
+`python -m pip install requests`
 
 In addition to these, the filter_data and show_box_plots functions from "question_1.py" have also been imported. The filter_data function preps the data for the API calls, and show_box_plots renders the same plot as the first question because it is especially relevant in this question.
 
