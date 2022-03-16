@@ -1,3 +1,14 @@
+"""
+This file utilizes requests, base64, and json to parse
+through Spotify's API results. This file can be used
+to get recommendations based on a seed genre, and lower
+and upper boundary for a specific audio feature.
+
+Quartiles are computed using songs with a popularity
+score of 80 or higher.
+"""
+
+
 import requests
 import base64
 import json
