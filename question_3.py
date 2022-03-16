@@ -13,9 +13,9 @@ def load_data():
     songs = songs.dropna()
     songs['popularity'] = pd.to_numeric(songs.popularity, errors='coerce')
     labels = songs['popularity']
-    features = songs[['key', 'valence', 'tempo', 'liveness',
-                      'instrumentalness', 'acousticness', 'tempo',
-                      'duration_ms.y']]
+    features = songs[['danceability', 'energy', 'key', 'loudness', 'mode',
+                      'speechiness', 'acousticness', 'instrumentalness',
+                      'liveness', 'valence', 'tempo']]
     return features, labels
 
 
@@ -43,7 +43,7 @@ def kerasfit():
                                          test_size=0.2, random_state=1)
 
     model = Sequential()
-    model.add(Dense(30, input_dim=8))
+    model.add(Dense(30, input_dim=11))
     model.add(Dense(25))
     model.add(Dense(20))
     model.add(Dense(15))
@@ -52,7 +52,7 @@ def kerasfit():
     model.add(Dense(1))
     model.compile(loss='mean_squared_error', optimizer='adam',
                   metrics=['accuracy'])
-    model.fit(inputs_train, labels_train, epochs=300, batch_size=10)
+    model.fit(inputs_train, labels_train, epochs=20, batch_size=10)
 
     predictions = model.predict(inputs_test)
     error = mean_squared_error(labels_test, predictions)
