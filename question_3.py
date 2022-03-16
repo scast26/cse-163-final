@@ -3,6 +3,7 @@ from sklearn import model_selection
 from sklearn.metrics import accuracy_score
 from keras.models import Sequential
 from keras.layers import Dense
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_squared_error
 import pandas as pd
 
@@ -64,7 +65,6 @@ def skfit():
     inputs_train, inputs_test, labels_train, labels_test = \
         model_selection.train_test_split(features, labels,
                                          test_size=0.2, random_state=1)
-    from sklearn.tree import DecisionTreeRegressor
 
     model = DecisionTreeRegressor()
     model.fit(inputs_train, labels_train)

@@ -42,6 +42,25 @@ The title of each plot function corresponds to an image of that same name that c
 
 
 ## Research Question 2: Will Spotify recommend a list of popular songs if we pass in audio feature parameters that are representative of already popular songs?
+To run the second research question, you will need to import requests, base64, json, and numpy. Python comes with the base64 module, and the JSON interpreter, so there is no need to install them.
 
+Numpy should already have been downloaded from the previous research question. To install requests, run the following line in your terminal:
+
+```python -m pip install requests```
+
+In addition to these, the filter_data and show_box_plots functions from "question_1.py" have also been imported. The filter_data function preps the data for the API calls, and show_box_plots renders the same plot as the first question because it is especially relevant in this question.
+
+The imports in "question_2.py" should be:
+```
+import requests
+import base64
+import json
+import numpy as np
+from question_1 import filter_data, show_box_plots
+```
+
+Once these imports are properly in place, you can run the file. When you run the file, there should be 8 new files that appear in the current directory. 4 of them will be .json files, and the other 4 will be .txt files. There is one .json and one .txt file for each audio feature that was examined. It is currently defaulted at instrumentalness, speechiness, danceability, and liveness, as these are the 4 audio features with the least amount of spread. The .json files contain 20 recommendations based on the audio feature provided in raw JSON. The .txt file parses the .json file, and provides you with a list of recommendations, as well as their popularity score. At the end of the file, the average popularity score is computed.
+
+You will likely find that songs by popular artists have a surprisingly low popularity score. As noted in the report, this context of popularity is associated with the popularity of the actual song (number of streams).
 
 ## Research Question 3: Can we predict a song’s popularity score based on its song’s audio features?
