@@ -52,7 +52,7 @@ Numpy should already have been downloaded from the previous research question. T
 In addition to these, the filter_data and show_box_plots functions from "question_1.py" have also been imported. The filter_data function preps the data for the API calls, and show_box_plots renders the same plot as the first question because it is especially relevant in this question.
 
 The imports in "question_2.py" should be:
-```
+```ruby
 import requests
 import base64
 import json
