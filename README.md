@@ -65,3 +65,27 @@ Once these imports are properly in place, you can run the file. When you run the
 You will likely find that songs by popular artists have a surprisingly low popularity score. As noted in the report, this context of popularity is associated with the popularity of the actual song (number of streams).
 
 ## Research Question 3: Can we predict a song’s popularity score based on its song’s audio features?
+To (approximately) reproduce our results, you will need to run `question_3.py`. 
+
+To properly run this file, you will need to install SciKit-Learn, Tensorflow, Keras, and Pandas, though this should already be installed from `question_1.py`.
+
+To install the necessary libraries, run the following lines in your terminal:
+
+`pip install -U scikit-learn`
+
+`pip install tensorflow`
+(note, the newest version of Python that Tensorflow is compatible with is v3.7)
+
+`pip install keras`
+
+The imports for this file should look like this:
+```ruby
+from sklearn.neural_network import MLPClassifier
+from sklearn import model_selection
+from sklearn.metrics import accuracy_score
+from keras.models import Sequential
+from keras.layers import Dense
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import mean_squared_error
+import pandas as pd
+```
