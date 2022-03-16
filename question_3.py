@@ -1,4 +1,3 @@
-# %%
 from sklearn.neural_network import MLPClassifier
 from sklearn import model_selection
 from sklearn.metrics import accuracy_score
@@ -52,7 +51,7 @@ def kerasfit():
     model.add(Dense(1))
     model.compile(loss='mean_squared_error', optimizer='adam',
                   metrics=['accuracy'])
-    model.fit(inputs_train, labels_train, epochs=10, batch_size=10)
+    model.fit(inputs_train, labels_train, epochs=300, batch_size=10)
 
     predictions = model.predict(inputs_test)
     error = mean_squared_error(labels_test, predictions)
