@@ -6,7 +6,7 @@ We decided to create plots to represent our findings using a new library of plot
 
 To start, download this project or clone it using:
 
-```git clone ```
+```git clone https://github.com/scast26/cse-163-final.git```
 
 If using Visual Studio Code: Then open Git or GitBash (depending on your operating system) to install the necessary libraries:
 Make sure to type these commands in separate lines.
