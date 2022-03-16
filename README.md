@@ -8,18 +8,18 @@ To start, download this project or clone it using:
 
 ```git clone ```
 
-Then open Git or GitBash (depending on your operating system) to install the necessary libraries:
+If using Visual Studio Code: Then open Git or GitBash (depending on your operating system) to install the necessary libraries:
 Make sure to type these commands in separate lines.
 
 ```pip install plotly```
 
-To check is plotly was installed correctly
+To check if plotly was installed correctly:
 
 ```pip list | grep plotly```
 
 ```pip show plotly```
 
-Install the rest
+Install the rest:
 
 ```pip install --upgrade --no-deps statsmodels```
 
