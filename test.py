@@ -1,5 +1,5 @@
 """
-This file verifies our results from main.py. It imports requests,
+This file verifies our results from question_2.py. It imports requests,
 json, the get_access_token function, and the Client ID and Client
 Secret from main.py.
 """
