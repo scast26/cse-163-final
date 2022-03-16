@@ -14,7 +14,7 @@ AUTH_URL = 'https://accounts.spotify.com/api/token'
 def get_access_token(client_id, client_secret):
     """
     This function takes a user's Spotify Client ID and
-    Client Secret, and returns an oAuth token the user
+    Client Secret, and returns an OAuth token the user
     can use to access Spotify's API.
     """
     # encode client credentials
@@ -48,7 +48,7 @@ def compute_quartile(df, column):
 
 def get_recommendations(token, genre, feature, feature_min, feature_max):
     """
-    This function takes an oAuth token, a genre of music, an audio feature,
+    This function takes an OAuth token, a genre of music, an audio feature,
     and an upper and lower bound for the audio feature as parameters. It
     uses the genre provided, and upper and lower feature boundaries to
     make GET request to Spotify's 'Get Recommendations' endpoint. A successful

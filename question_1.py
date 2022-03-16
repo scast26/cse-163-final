@@ -1,8 +1,3 @@
-"""
-This function takes a DataFrame containing songs and their audio
-features as a parameter. It returns a plot that shows the box and whisker
-plots of all of the features whose values range from zero to one.
-"""
 
 
 import plotly.express as px
