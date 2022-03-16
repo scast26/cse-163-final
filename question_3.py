@@ -18,7 +18,7 @@ def load_data():
     Removes unuseable data
     Splits into features and labels
     """
-    songs = pd.read_csv('all_songs.csv', encoding='unicode_escape',
+    songs = pd.read_csv('song_dataset.csv', encoding='unicode_escape',
                         low_memory=False)
     songs = songs.dropna()
     songs['popularity'] = pd.to_numeric(songs.popularity, errors='coerce')
