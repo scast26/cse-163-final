@@ -1,3 +1,7 @@
+"""
+Creates Machine learning models using sklearn and keras
+to predict popularity scores using audio features
+"""
 from sklearn.neural_network import MLPClassifier
 from sklearn import model_selection
 from sklearn.metrics import accuracy_score
@@ -9,7 +13,12 @@ import pandas as pd
 
 
 def load_data():
-    songs = pd.read_csv('song_dataset.csv', encoding='unicode_escape',
+    """
+    Reads in data
+    Removes unuseable data
+    Splits into features and labels
+    """
+    songs = pd.read_csv('all_songs.csv', encoding='unicode_escape',
                         low_memory=False)
     songs = songs.dropna()
     songs['popularity'] = pd.to_numeric(songs.popularity, errors='coerce')
@@ -20,7 +29,12 @@ def load_data():
     return features, labels
 
 
-def fit():
+def MLPfit():
+    """
+    Creates a MLPClassifier model
+    Fits and tests the model
+    Prints out results
+    """
     features, labels = load_data()
     inputs_train, inputs_test, labels_train, labels_test = \
         model_selection.train_test_split(features, labels, test_size=0.2)
@@ -38,6 +52,11 @@ def fit():
 
 
 def kerasfit():
+    """
+    Creates a Sequential model using Keras
+    Fits and tests the model
+    Prints out results
+    """
     features, labels = load_data()
     inputs_train, inputs_test, labels_train, labels_test = \
         model_selection.train_test_split(features, labels,
@@ -60,7 +79,12 @@ def kerasfit():
     print("MSE = ", error)
 
 
-def skfit():
+def sklearnfit():
+    """
+    Creates a DecisionTreeRegressor model
+    Fits and tests the model
+    Prints out results
+    """
     features, labels = load_data()
     inputs_train, inputs_test, labels_train, labels_test = \
         model_selection.train_test_split(features, labels,
@@ -76,11 +100,11 @@ def skfit():
 
 
 def main():
-    print('skfit function:')
-    skfit()
+    print('sklearn fit function:')
+    sklearnfit()
     print("---------------------------------------------------")
-    print('fit function:')
-    fit()
+    print('MLP fit function:')
+    MLPfit()
     print("---------------------------------------------------")
     print('keras fit function:')
     kerasfit()
