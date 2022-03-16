@@ -28,8 +28,8 @@ Install the rest:
 ```pip install patsy```
 
 
-Every file with the code to plot these plots contain comments explaining each step of the process and purpose of each line of code for readers to clearly follow. The file corresponding to our first research question is titled “question_1.py” that includes these imports necessary for running the file. 
-For the plot file labeled "question_1.py" the following imports are included:
+Every file with the code to plot these plots contain comments explaining each step of the process and purpose of each line of code for readers to clearly follow. The file corresponding to our first research question is titled ```question_1.py```that includes these imports necessary for running the file. 
+For the plot file labeled ```question_1.py```the following imports are included:
 
 ```ruby
 import plotly.express as px
@@ -37,6 +37,7 @@ import plotly.subplots as sp
 import pandas as pd
 import numpy as np
 ```
+With these imports in place, the file is ready to run. When running the final, three plots (one box plot, and two unique scatter plots) will be generated and displayed in separate tabs. The box plot and scatter plot with subplots both are created with inclusion of all significant audio features in our dataset. The other scatter plot created references the columns of ```danceability’```, ```‘popularity’```, ```‘energy’```, and ```‘speechiness’``` to showcase a more narrow approach to our data analysis.
 
 The title of each plot function corresponds to an image of that same name that contains solely a capture of what the correct plot will output. 
 
