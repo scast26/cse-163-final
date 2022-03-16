@@ -37,7 +37,7 @@ import plotly.subplots as sp
 import pandas as pd
 import numpy as np
 ```
-With these imports in place, the file is ready to run. When running the final, three plots (one box plot, and two unique scatter plots) will be generated and displayed in separate tabs. The box plot and scatter plot with subplots both are created with inclusion of all significant audio features in our dataset. The other scatter plot created references the columns of ```danceability’```, ```‘popularity’```, ```‘energy’```, and ```‘speechiness’``` to showcase a more narrow approach to our data analysis.
+With these imports in place, the file is ready to run. When running the final, three plots (one box plot, and two unique scatter plots) will be generated and displayed in separate tabs. The box plot and scatter plot with subplots both are created with inclusion of all significant audio features in our dataset. The other scatter plot created references the columns of ```danceability```, ```popularity```, ```energy```, and ```speechiness``` to showcase a more narrow approach to our data analysis.
 
 The title of each plot function corresponds to an image of that same name that contains solely a capture of what the correct plot will output. 
 
