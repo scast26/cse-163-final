@@ -1,3 +1,11 @@
+"""
+File that generates plots to represent colorful
+visualizations of our first research question.
+
+Compares presence and value of audio features
+in songs with a popularity score of 80 and
+above in different plots with the plotly library
+"""
 
 
 import plotly.express as px
@@ -6,7 +14,8 @@ import pandas as pd
 import numpy as np
 
 
-DATA = 'song_dataset.csv'
+DATA = 'https://raw.githubusercontent.com/scast26/'\
+        + 'cse-163-final/main/song_dataset.csv'
 
 
 def filter_data(data):
@@ -63,7 +72,9 @@ def size_scatter(data):
     popularity score of 80 or above.
     """
     fig = px.scatter(data, x='danceability', y='energy', size='speechiness',
-                     color='popularity', log_x=True, size_max=60)
+                     color='popularity',
+                     title='Danceability and Energy Ratio for Popular Songs',
+                     log_x=True, size_max=60)
     fig.show()
 
 
