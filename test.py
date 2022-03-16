@@ -1,7 +1,7 @@
 """
 This file verifies our results from question_2.py. It imports requests,
 json, the get_access_token function, and the Client ID and Client
-Secret from main.py.
+Secret from question_2.py.
 """
 
 from question_2 import (requests, json, get_access_token,
